@@ -8,7 +8,6 @@
 .buildlog/
 .history
 .svn/
-migrate_working_dir/
 
 # IntelliJ related
 *.iml
@@ -31,6 +30,11 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+*.lock
+/lib/generated/
+
+# Web related
+lib/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols
@@ -42,3 +46,10 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+/utilities/git_scripts
+.fvm/flutter_sdk
+lib/generated
+lib/generated/locales.g.dart
+.vscode/settings.json
+.vscode/launch.json
+/ios/key
