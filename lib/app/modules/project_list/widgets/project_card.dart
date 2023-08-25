@@ -5,6 +5,7 @@ import '../../common/widgets/other/custom_checkbox.dart';
 import '../../common/widgets/textfield/custom_text_form_field.dart';
 import '../../common/widgets/texts/custom_text.dart';
 import '../../../../core/models/project_model.dart';
+import '../../../../core/utils/context_extension.dart';
 import '../../../../core/utils/utils.dart';
 import '../../../../core/variables/colors.dart';
 
@@ -32,20 +33,20 @@ class ProjectCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             flutterLogo(),
-            projectInfoSide(),
-            versionNumberField(),
+            projectInfoSide(context),
+            versionNumberField(context),
             SizedBox(width: Utils.normalPadding),
-            Row(children: [iosCheckBox(), SizedBox(width: Utils.highPadding), androidCheckBox()]),
-            SizedBox(width: Get.width * 0.1, child: projectState ? loadingWidget() : uploadButton())
+            Row(children: [iosCheckBox(), SizedBox(width: context.highPadding), androidCheckBox()]),
+            SizedBox(width: context.dynamicWidth(0.1), child: projectState ? loadingWidget() : uploadButton())
           ],
         ),
       ),
     );
   }
 
-  SizedBox versionNumberField() {
+  SizedBox versionNumberField(BuildContext context) {
     return SizedBox(
-      width: Get.width * 0.09,
+      width: context.dynamicWidth(0.09),
       child: CustomTextFormField(
         initialValue: projectModel.version,
         label: "Version",
@@ -117,15 +118,15 @@ class ProjectCard extends StatelessWidget {
     );
   }
 
-  SizedBox projectInfoSide() {
+  SizedBox projectInfoSide(BuildContext context) {
     return SizedBox(
-      width: Get.width * 0.6,
+      width: context.dynamicWidth(0.6),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(width: Get.width * 0.2, child: CustomText.extraHigh(projectModel.projectName, bold: true)),
+          SizedBox(width: context.dynamicWidth(0.2), child: CustomText.extraHigh(projectModel.projectName, bold: true)),
           SizedBox(
-            width: Get.width * 0.25,
+            width: context.dynamicWidth(0.25),
             child: CustomText(
               "/${(projectModel.path ?? "").split("/").last}",
               maxlines: 1,
