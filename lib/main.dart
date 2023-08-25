@@ -21,6 +21,7 @@ void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(ProjectModelAdapter());
   await Hive.openBox(StorageKeys.customStorage.name);
+  await WindowManager.instance.setMinimumSize(const Size(800, 600));
   await WindowManager.instance.setAspectRatio(16 / 9);
   await initApp();
 }

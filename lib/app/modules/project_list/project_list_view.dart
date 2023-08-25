@@ -26,21 +26,21 @@ class ProjectListView extends GetView<ProjectListController> {
                 onChangeComplete: (val) => controller.searchKey = val, hintText: "Search Project With Name", leadingIcon: const Icon(Icons.search)),
             SizedBox(height: Utils.normalPadding),
             Expanded(child: projectListView()),
-            logList(),
+            logList,
           ],
         ),
       ),
     );
   }
 
-  Obx logList() {
+  Obx get logList {
     return Obx(
       () => controller.log.isEmpty
           ? const SizedBox.shrink()
           : SizedBox(
               height: Get.height * 0.2,
               child: DecoratedBox(
-                decoration: BoxDecoration(color: ColorTable.getReversedTextColor, border: Border.all(color: Get.theme.primaryColor)),
+                decoration: _logListBoxDecoration,
                 child: Padding(
                   padding: EdgeInsets.all(Utils.lowPadding),
                   child: Column(
@@ -62,6 +62,13 @@ class ProjectListView extends GetView<ProjectListController> {
     );
   }
 
+  BoxDecoration get _logListBoxDecoration {
+    return BoxDecoration(
+        color: ColorTable.getReversedTextColor,
+        border: Border.all(color: Get.theme.primaryColor),
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(Utils.normalRadius), topRight: Radius.circular(Utils.normalRadius)));
+  }
+
   Row logCard(int index) {
     return Row(
       mainAxisSize: MainAxisSize.min,
@@ -75,18 +82,15 @@ class ProjectListView extends GetView<ProjectListController> {
   Obx projectListView() {
     return Obx(() {
       if (controller.state == ProjectListState.Busy) {
-        return Center(
-          child: CircularProgressIndicator(strokeWidth: Utils.normalPadding, color: Get.theme.primaryColor),
-        );
+        return Center(child: CircularProgressIndicator(strokeWidth: Utils.normalPadding, color: Get.theme.primaryColor));
       }
       if (controller.projectList.isEmpty && controller.state != ProjectListState.Busy) {
         return Center(child: CustomText("We Cannot Find Any Saved Project"));
       }
       List<ProjectModel> searchedList =
           controller.projectList.where((e) => (e.projectName ?? "").toLowerCase().contains(controller.searchKey.toLowerCase())).toList();
-      return ListView.separated(
+      return ListView.builder(
         itemCount: searchedList.length,
-        separatorBuilder: (context, index) => SizedBox(height: Utils.normalPadding),
         itemBuilder: (context, index) {
           ProjectModel projectModel = searchedList[index];
           return Obx(
