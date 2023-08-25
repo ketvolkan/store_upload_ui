@@ -5,13 +5,11 @@ import 'dart:async';
 import 'package:async/async.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
 import '../../app/modules/common/widgets/buttons/custom_inkwell.dart';
 import '../../app/modules/common/widgets/dialog/awesome_dialog/custom_awesome_dialog.dart';
 import '../../app/modules/common/widgets/texts/custom_text.dart';
-
 import '../variables/colors.dart';
 import 'utils.dart';
 

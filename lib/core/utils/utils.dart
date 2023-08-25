@@ -4,9 +4,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:process_run/process_run.dart';
-import 'package:store_upload_ui/app/modules/project_list/project_list_controller.dart';
-import 'package:store_upload_ui/core/constants/app_constants.dart';
-import 'package:store_upload_ui/core/models/project_model.dart';
+import '../../app/modules/project_list/project_list_controller.dart';
+import '../constants/app_constants.dart';
+import '../models/project_model.dart';
 import 'package:xml/xml.dart';
 import 'package:yaml/yaml.dart';
 

@@ -7,8 +7,7 @@ class CustomInkwell extends StatelessWidget {
   final EdgeInsets? padding;
   final Widget child;
   final bool disableTabEfect;
-  const CustomInkwell({Key? key, required this.onTap, required this.child, this.padding, this.disableTabEfect = false})
-      : super(key: key);
+  const CustomInkwell({Key? key, required this.onTap, required this.child, this.padding, this.disableTabEfect = false}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

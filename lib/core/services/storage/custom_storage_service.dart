@@ -16,10 +16,6 @@ class CustomStorageService extends GetxService {
     return (_storage?.get(key) != null);
   }
 
-  void removeModel(StorageKeys key) {
-    _storage?.delete(key.name);
-  }
-
   Future<void> write(String key, dynamic value) async {
     await _storage?.put(key, value);
   }

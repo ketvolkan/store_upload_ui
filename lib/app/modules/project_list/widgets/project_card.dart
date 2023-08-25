@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:store_upload_ui/app/modules/common/widgets/buttons/custom_elevated_button.dart';
-import 'package:store_upload_ui/app/modules/common/widgets/other/custom_checkbox.dart';
-import 'package:store_upload_ui/app/modules/common/widgets/textfield/custom_text_form_field.dart';
-import 'package:store_upload_ui/app/modules/common/widgets/texts/custom_text.dart';
-import 'package:store_upload_ui/core/models/project_model.dart';
-import 'package:store_upload_ui/core/utils/utils.dart';
-import 'package:store_upload_ui/core/variables/colors.dart';
+import '../../common/widgets/buttons/custom_elevated_button.dart';
+import '../../common/widgets/other/custom_checkbox.dart';
+import '../../common/widgets/textfield/custom_text_form_field.dart';
+import '../../common/widgets/texts/custom_text.dart';
+import '../../../../core/models/project_model.dart';
+import '../../../../core/utils/utils.dart';
+import '../../../../core/variables/colors.dart';
 
 class ProjectCard extends StatelessWidget {
   final ProjectModel projectModel;

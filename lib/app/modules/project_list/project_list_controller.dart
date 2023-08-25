@@ -4,13 +4,14 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:store_upload_ui/app/modules/common/widgets/buttons/custom_inkwell.dart';
-import 'package:store_upload_ui/app/modules/common/widgets/texts/custom_text.dart';
-import 'package:store_upload_ui/core/models/project_model.dart';
-import 'package:store_upload_ui/core/services/storage/custom_storage_service.dart';
-import 'package:store_upload_ui/core/services/storage/storage_key_enums.dart';
-import 'package:store_upload_ui/core/utils/getx_extensions.dart';
-import 'package:store_upload_ui/core/utils/utils.dart';
+
+import '../../../core/models/project_model.dart';
+import '../../../core/services/storage/custom_storage_service.dart';
+import '../../../core/services/storage/storage_key_enums.dart';
+import '../../../core/utils/getx_extensions.dart';
+import '../../../core/utils/utils.dart';
+import '../common/widgets/buttons/custom_inkwell.dart';
+import '../common/widgets/texts/custom_text.dart';
 
 enum ProjectListState { Initial, Busy, Error, Loaded }
 

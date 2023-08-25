@@ -1,12 +1,12 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:store_upload_ui/app/modules/common/widgets/appbar/default_app_bar.dart';
-import 'package:store_upload_ui/app/modules/common/widgets/other/custom_scaffold.dart';
-import 'package:store_upload_ui/app/modules/common/widgets/textfield/custom_search_bar.dart';
-import 'package:store_upload_ui/app/modules/common/widgets/texts/custom_text.dart';
-import 'package:store_upload_ui/app/modules/project_list/widgets/project_card.dart';
-import 'package:store_upload_ui/core/models/project_model.dart';
-import 'package:store_upload_ui/core/variables/colors.dart';
+import '../common/widgets/appbar/default_app_bar.dart';
+import '../common/widgets/other/custom_scaffold.dart';
+import '../common/widgets/textfield/custom_search_bar.dart';
+import '../common/widgets/texts/custom_text.dart';
+import 'widgets/project_card.dart';
+import '../../../core/models/project_model.dart';
+import '../../../core/variables/colors.dart';
 import 'project_list_controller.dart';
 import '../../../../../../core/utils/utils.dart';
 

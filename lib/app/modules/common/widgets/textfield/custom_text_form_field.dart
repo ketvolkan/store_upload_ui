@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 
 import '../../../../../core/utils/utils.dart';
 import '../../../../../core/variables/colors.dart';
-
 import '../texts/custom_text.dart';
 
 class CustomTextFormField extends StatelessWidget {
