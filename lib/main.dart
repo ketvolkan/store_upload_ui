@@ -4,21 +4,24 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'app/modules/project_list/project_list_binding.dart';
+import 'core/models/project_model.dart';
+import 'package:window_manager/window_manager.dart';
 
 import 'app/modules/common/controllers/app_controller.dart';
-import 'app/modules/project_list/project_list_binding.dart';
 import 'app/routes/app_pages.dart';
 import 'app/routes/app_routes.dart';
 import 'app/theme/app_theme.dart';
-import 'core/models/project_model.dart';
 import 'core/services/storage/custom_storage_service.dart';
 import 'core/services/storage/storage_key_enums.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await windowManager.ensureInitialized();
   await Hive.initFlutter();
   Hive.registerAdapter(ProjectModelAdapter());
   await Hive.openBox(StorageKeys.customStorage.name);
+  await WindowManager.instance.setAspectRatio(16 / 9);
   await initApp();
 }
 

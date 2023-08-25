@@ -193,22 +193,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.4"
-  debug_console:
-    dependency: "direct main"
-    description:
-      name: debug_console
-      sha256: "85a43612dc73ae52db7f52a94b0705182ade42aacaa2db2e89608b40e83a7a26"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.1"
-  expandable:
-    dependency: transitive
-    description:
-      name: expandable
-      sha256: "9604d612d4d1146dafa96c6d8eec9c2ff0994658d6d09fed720ab788c7f5afc2"
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.0.1"
   fake_async:
     dependency: transitive
     description:
@@ -584,14 +568,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.3"
-  rxdart:
+  screen_retriever:
     dependency: transitive
     description:
-      name: rxdart
-      sha256: "0c7c0cedd93788d996e33041ffecda924cc54389199cde4e6a34b440f50044cb"
+      name: screen_retriever
+      sha256: "4931f226ca158123ccd765325e9fbf360bfed0af9b460a10f960f9bb13d58323"
       url: "https://pub.dev"
     source: hosted
-    version: "0.27.7"
+    version: "0.1.6"
   shelf:
     dependency: transitive
     description:
@@ -773,6 +757,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.0.6"
+  window_manager:
+    dependency: "direct main"
+    description:
+      name: window_manager
+      sha256: "9eef00e393e7f9308309ce9a8b2398c9ee3ca78b50c96e8b4f9873945693ac88"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.5"
   xdg_directories:
     dependency: transitive
     description:
